@@ -1,0 +1,6 @@
+.env*
+analysis/
+tools/
+Velocity AE/
+test/
+SETUP.md

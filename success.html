@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow">
+  <title>Your key · Strade.cc</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#050507;color:#f2f2f4;font:16px/1.6 system-ui,sans-serif}
+    main{max-width:640px;width:100%;padding:40px;border:1px solid #ffffff20;border-radius:22px;background:#ffffff06}
+    a{color:inherit}
+    h1{font-size:36px;line-height:1.15;margin:0 0 12px;letter-spacing:-.02em}
+    p{color:#aaa;margin:8px 0}
+    code{display:block;overflow-wrap:anywhere;padding:20px;border:1px solid #ffffff30;border-radius:12px;font-size:19px;margin:16px 0 4px;background:#00000030;font-family:'JetBrains Mono',ui-monospace,monospace}
+    .row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+    button,.button{margin:0;background:#f2f2f4;color:#050507;border:0;padding:12px 22px;border-radius:99px;cursor:pointer;font:500 14px system-ui;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
+    button:hover,.button:hover{background:#d8d8e0;transform:translateY(-2px)}
+    .secondary{background:transparent;color:#ddd;border:1px solid #ffffff30}
+    .secondary:hover{background:#ffffff10}
+    .brand{font-size:22px;font-weight:600;text-decoration:none;letter-spacing:-.03em}
+    .fine{font-size:13px;color:#888;margin-top:22px}
+    #reference{font:11px 'JetBrains Mono',monospace;color:#666;letter-spacing:.05em;margin-top:24px;overflow-wrap:anywhere}
+  </style>
+  <script src="/success.js" defer></script>
+</head>
+<body><main>
+  <a class="brand" href="/">Strade.cc</a>
+  <h1 id="heading">Checking your payment</h1>
+  <p id="status" role="status" aria-live="polite">Your key will appear here after payment is confirmed. You do not need to pay again.</p>
+  <section id="delivery" hidden>
+    <code id="key"></code>
+    <div class="row">
+      <button id="copy" type="button">Copy key</button>
+      <a id="download" class="button secondary" href="#" rel="noopener">Download loader ↓</a>
+    </div>
+    <p class="fine">Save your key and bookmark this private order page. Keep its link private.</p>
+  </section>
+  <button id="retry" class="secondary" type="button" hidden>Check again</button>
+  <p id="reference"></p>
+  <a href="https://discord.gg/strade" target="_blank" rel="noopener noreferrer" class="fine">Contact support</a>
+</main></body></html>

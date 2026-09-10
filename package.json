@@ -1,0 +1,11 @@
+{
+  "name": "strade-store",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node --env-file-if-exists=.env.local scripts/dev.mjs",
+    "test": "node --test"
+  }
+}
