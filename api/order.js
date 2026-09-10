@@ -8,7 +8,8 @@ export async function POST(request) {
     if (found.payment_status !== 'paid') return json({ status: 'pending' });
     const license = await fulfill(found);
     return json({ status: 'fulfilled', key: license });
-  } catch {
+  } catch (error) {
+    console.error('order failed:', error?.message || error);
     return json({ error: 'Unable to prepare your key. Please retry.' }, 503);
   }
 }

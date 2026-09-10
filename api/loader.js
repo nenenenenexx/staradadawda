@@ -23,7 +23,8 @@ export async function GET(request) {
       'Cache-Control': 'private, no-store',
       'X-Content-Type-Options': 'nosniff'
     } });
-  } catch {
+  } catch (error) {
+    console.error('loader failed:', error?.message || error);
     return json({ error: 'Downloads are temporarily unavailable. Please try again shortly.' }, 503);
   }
 }
