@@ -4,7 +4,7 @@
   "type": "module",
   "engines": { "node": "24.x" },
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node -e \"import('node:fs/promises').then(async ({mkdir,copyFile})=>{await mkdir('public',{recursive:true});await Promise.all(['index.html','product.png','trend.png','success.html','success.js'].map(f=>copyFile(f,'public/'+f)))})\"",
     "dev": "node --env-file-if-exists=.env.local scripts/dev.mjs",
     "test": "node --test"
   }
